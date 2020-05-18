@@ -14,6 +14,7 @@
 =end%>
 
     <%= f.submit "Update Card"%>
+    <%=  link_to  "Remove Item", order_item_path(item) , method: :delete , remote: true %>
     <%end%>
 
     <h3>
@@ -21,3 +22,6 @@
     </h3>
 
 <% end%>
+
+
+<h3> Your Total is : <%= current_order.subtotal %></h3>
